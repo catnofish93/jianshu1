@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8dedb7b8-9e9a-4a4d-86a7-068c81890d61" name="默认的" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jianshu1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/collectArticle/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/collectArticle/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/colloectArticle/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/colloectArticle/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/comment/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/comment/index.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/commentList/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/commentList/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/content/content.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/content/content.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/detail/detail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/detail/detail.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/header/header.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/header/headerC.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/homePage/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/homePage/index.module.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/likeArticle/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/likeArticle/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/signIn/signIn.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/signIn/signIn.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/writeArticle/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/common/writeArticle/index.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/switch/switch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/switch/switch.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/demo_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/iconfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/iconfont.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/font/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/banner-s-5-4ba25cf5041931a0ed2062828b4064cb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/banner-s-7-1a0222c91694a1f38e610be4bf9669be.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/banner-s-club-aa8bdf19f8cf729a759da42e4a96f366.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/banner-s-daily-e6f6601abc495573ad37f2532468186f.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/collect-note-955d8c71641a360924390da9da4b0151.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/copyRight/smrz-557fa318122c99a66523209bf9753a27.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/detail/code.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/detail/reward.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/detail/zan.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/download-index-side-qrcode-4130a7a6521701c4cb520ee6997d5fdb.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/demo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/demo_index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/iconfont.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/iconfont.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/iconfont.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/iconfont.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/iconfont.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/iconfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/iconfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/iconfont/iconfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/nav-logo-4c7bbafe27adc892f3046e6978459bac.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/paid-content-6f5f218ca8590aa726791acab7b37951.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/static/signIN/sign_in_bg-bbc515a9c2e7734807ea281b9b2ab380.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/detailReducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/reducer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/sagas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/user.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/utils/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1va4icgY9iKEsyvhWE23GaaegQX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="8dedb7b8-9e9a-4a4d-86a7-068c81890d61" name="默认的" comment="" />
+      <created>1626786994377</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1626786994377</updated>
+      <workItem from="1626786995621" duration="2843000" />
+      <workItem from="1626830164168" duration="1002000" />
+      <workItem from="1626841737881" duration="1255000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

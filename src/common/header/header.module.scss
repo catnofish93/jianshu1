@@ -1,0 +1,201 @@
+.home{
+    color:#ea6f5a;
+    font-size: 17px;
+    margin-right: 70px;
+    cursor:pointer
+  }
+  .download{
+    color:#333;
+    margin-right: 70px;
+    cursor:pointer
+  }
+  .search_wrap{
+    position: relative;
+  }
+  .search{
+    width:160px;
+    height: 38px;
+    margin-top:9px;
+    border-radius: 40px;
+    background: #eee;
+    border:none;
+    transition: background-color 0.2s ease,width 0.2s ease;
+    padding: 0 50px 0 20px
+  }
+  .search.search_focus{
+    width: 200px
+  }
+  .search_panel{
+    position: absolute;
+    width:100%;
+    top:58px;
+    left:0;
+    width: 189px;
+    background-color: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,.2);
+    padding: 20px;
+    line-height: 1;
+    font-size: 15px
+  }
+  /* iconfont字体 */
+  //@font-face {
+  //  font-family: 'iconfont';
+  //  src: url('src/static/iconfont/iconfont.eot');
+  //  src: url('src/static/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  //      url('src/static/iconfont/iconfont.woff2') format('woff2'),
+  //      url('src/static/iconfont/iconfont.woff') format('woff'),
+  //      url('src/static/iconfont/iconfont.ttf') format('truetype'),
+  //      url('src/static/iconfont/iconfont.svg#iconfont') format('svg');
+  //}
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .iconfont.loupe{
+    position: absolute;
+    right: 10px;
+    top:14px;
+    height: 30px;
+    width:30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    cursor:pointer;
+    font-size: 20px;
+    font-weight: bold
+  }
+  .iconfont.loupe.graybc{
+    background:#969696;
+  }
+  .iconfont.Aa{
+    margin-right: 15px;
+    cursor:pointer;
+    font-size: 25px;
+    color:#969696
+  }
+  .iconfont.diamond{
+    margin: 0 0 0 17px;;
+    cursor:pointer;
+    color:#ea6f5a;
+    font-size: 30px
+  }
+  .iconfont.beta{
+    margin-right: 50px;
+    cursor:pointer;
+    color:#ea6f5a;
+    font-size: 30px
+  }
+  .login{
+    font-size: 15px;
+    color:#969696;
+    margin-right: 50px;
+    cursor:pointer
+  }
+  .register{
+    color:#ea6f5a;
+    font-size: 15px;
+    height: 38px;
+    border:solid 1px #ea6f5a;
+    width: 80px;
+    text-align: center;
+    line-height: 38px;
+    margin-top:10px;
+    border-radius: 20px;
+    margin-right: 20px;
+    cursor:pointer
+  }
+  .writer{
+    width: 100px;
+    height: 40px;
+    background: #ea6f5a;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top:9px;
+    color:#ffffff;
+    margin-right: 20px;
+    cursor:pointer
+  }
+  .change_red{
+    float: right;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .change_red span{
+    font-size: 12px;
+    margin-right: 5px
+  }
+  .transition span{
+    display: inline-block;
+    transform: rotate(360deg);
+    transition: transform 1s
+  }
+  .red_item{
+      font-size: 12px;
+      border:solid 1px #ccc;
+      border-radius: 2px;
+      padding: 3px 6px;
+      margin-right: 5px;
+      display: inline-block;
+      margin-top:10px;
+      cursor: pointer;
+  }
+  .HeaderWrap{
+    width:100%;
+    height:58px;
+    border-bottom:solid 1px #e7e7e7
+  }
+  .HeaderTitle{
+    width:100px;
+    height:56px;
+    float:left;
+    cursor:pointer
+  }
+  .HeaderMenu{
+    float:left;
+    display:flex;
+    margin:0 0 0 150px;
+    height:56px;
+    line-height:56px;
+    position:relative
+  }
+  .HeaderPerson{
+    float:right;
+    display:flex;
+    height:58px;
+    position:relative;
+    line-height:58px
+  }
+  .contentWrap{
+    height: calc(100% - 58px);
+    overflow: auto;
+  }
+  .dropdown{
+    margin-right: 20px;
+  }
+  .menu{
+    padding: 10px;
+  }
+  .menu .iconfont{
+    margin-right: 10px;
+    color:#ed7961
+  }
+.goTop{
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  border: solid 1px #aaa;
+  padding: 15px;
+  cursor: pointer;
+}
+.modal{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: transparent;
+}

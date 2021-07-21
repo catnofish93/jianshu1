@@ -1,0 +1,102 @@
+.wrap{
+  height: 100%;
+  display: flex;
+  .menu{
+    .newCollect{
+      text-align: center;
+      margin: 15px 0;
+    }
+    .menuItem{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 40px;
+      padding: 0 5px;
+      border-left: soldi 3px #404040;
+      &:hover{
+        background: #aaa;
+        border-left: soldi 3px #ec7259;
+      }
+    }
+    .selected{
+      background: #aaa;
+      border-left: soldi 3px #ec7259;
+    }
+    .backHome{
+      padding: 30px 18px 5px;
+      text-align: center;
+      display: block;
+      font-size: 15px;
+      padding: 9px 0;
+      color: #ec7259;
+      border: 1px solid rgba(236,114,89,.8);
+      border-radius: 20px;
+      -webkit-transition: border-color .2s ease-in;
+      -o-transition: border-color .2s ease-in;
+      transition: border-color .2s ease-in;
+      cursor: pointer;
+    }
+    position: relative;
+    overflow-y: auto;
+    background-color: #404040;
+    color: #f2f2f2;
+    z-index: 100;
+    width: 16.66666667%;
+    padding: 20px 10px;
+    .footer{
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 5px;
+      .item{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+    }
+  }
+  .articleList{
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid #d9d9d9;
+    font-size: 15px;
+    .newArticle{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      margin: 15px;
+    }
+    .item{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+      cursor: pointer;
+      &:hover{
+        background: #eee;
+      }
+      .center{
+        flex-grow: 1;
+        text-align: left;
+        padding: 0 10px;
+      }
+    }
+  }
+  .content{
+    flex-grow: 1;
+    .status{
+      text-align: right;
+    }
+    .title{
+      font-size: 20px;
+      padding-left: 20px;
+    }
+  }
+}
+.ant-modal-footer{
+  text-align: center;
+}

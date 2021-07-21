@@ -1,0 +1,51 @@
+{
+  "id": "1454506",
+  "name": "jianshu",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "866317",
+      "name": "铅笔_pencil82",
+      "font_class": "qianbipencil82",
+      "unicode": "e96a",
+      "unicode_decimal": 59754
+    },
+    {
+      "icon_id": "993881",
+      "name": "报告-beta",
+      "font_class": "beta",
+      "unicode": "e64c",
+      "unicode_decimal": 58956
+    },
+    {
+      "icon_id": "1232444",
+      "name": "钻石",
+      "font_class": "zuanshi",
+      "unicode": "e728",
+      "unicode_decimal": 59176
+    },
+    {
+      "icon_id": "1621077",
+      "name": "Aa",
+      "font_class": "Aa",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "5201483",
+      "name": "换一批",
+      "font_class": "huanyipi",
+      "unicode": "e6e1",
+      "unicode_decimal": 59105
+    },
+    {
+      "icon_id": "5649815",
+      "name": "放大镜",
+      "font_class": "fangdajing",
+      "unicode": "e624",
+      "unicode_decimal": 58916
+    }
+  ]
+}

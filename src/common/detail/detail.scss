@@ -1,0 +1,141 @@
+.bg{
+    height: 100%;
+    background: #f9f9f9;
+}
+.detailWrap{
+    box-sizing: content-box;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+    background-color: #fff;
+    min-height: calc(100vh - 186px);
+    display: flex;
+}
+.left{
+    flex-shrink: 0;
+    margin-bottom: 24px;
+    margin-right: 10px;
+    width: 730px;
+    padding: 32px;
+}
+.title{
+    font-size: 30px;
+    font-weight: 700;
+    word-break: break-word;
+}
+.authorInfo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+    font-size: 13px;
+}
+.authorInfo img{
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #eee;
+    min-width: 50px;
+    min-height: 50px;
+    width: 50px;
+    height: 50px;
+}
+.authorDetail{
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50px;
+}
+.attention{
+    border: solid 1px rgb(236, 114, 89);
+    padding: 4px 10px;
+    border-radius: 15px;
+    line-height: 1;
+    cursor: pointer;
+}
+.diamondSum{
+    margin-right: 10px;
+}
+.readSum{
+    color: #969696;
+}
+.paper{
+    color:#404040;
+    line-height: 1.2;
+    font-size: 16px;
+}
+.authorCell{
+    border: solid 1px #eee;
+    padding: 10px;
+    position: relative;
+    border-radius: 7px;
+}
+.authorCell .authorInfo{
+    margin-bottom: 0;
+}
+.right{
+    flex-grow: 1;
+}
+.authorCell .attention{
+    position: absolute;
+    right: 10px;
+    top: 15px
+}
+.authorInfoWrap{
+    border-bottom: solid 1px #eee;
+    padding-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.interest{
+    padding: 15px;
+}
+.interest .name{
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: normal;
+}
+.interest .readCount{
+    font-size: 12px;
+    color: #969696;
+}
+.suggestion{
+    margin-top: 15px;
+}
+.interestLabel{
+    font-weight: 500;
+    line-height: 20px;
+    font-size: 16px;
+    margin-left: 15px;
+    padding-left: 5px;
+    border-left: solid 4px #ec7259;
+}
+.suspension{
+    position: fixed;
+    left: 200px;
+    top: 40%;
+    .text{
+        font-size: 14px;
+        text-align: center;
+        color: #969696;
+        margin-bottom: 15px;
+    }
+}
+.circle{
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    border-radius: 50%;
+    box-shadow: 0 2px 10px rgba(0,0,0,.05);
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    .image{
+        width: 25px;
+        height: 25px;
+    }
+}

@@ -1,13 +1,29 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #404040;
+  font-family: -apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-feature-settings: "tnum";
+  font-variant: tabular-nums;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+@font-face {
+  font-family: 'iconfont';  /* project id 2476449 */
+  src: url('//at.alicdn.com/t/font_2476449_usrvyl7ehvl.eot');
+  src: url('//at.alicdn.com/t/font_2476449_usrvyl7ehvl.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2476449_usrvyl7ehvl.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2476449_usrvyl7ehvl.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2476449_usrvyl7ehvl.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2476449_usrvyl7ehvl.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;}

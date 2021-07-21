@@ -1,0 +1,84 @@
+.wrap{
+  width: 960px;
+  margin: 15px auto;
+  display: flex;
+}
+.wrap .right{
+  width: 150px;
+}
+.infoList1{
+  display: flex;
+  margin-top: 10px;
+}
+.infoList1 .item{
+  border-right: solid 1px #f0f0f0;
+  text-align: center;
+  margin-right: 20px;
+  padding-right: 10px;
+}
+.right .name{
+  color: #2f2f2f;
+  font-size: 21px;
+  font-weight: 700;
+}
+.articleList {
+  padding: 20px 0;
+  border-bottom: solid 1px #f0f0f0;
+}
+.content1{
+  font-size: 13px;
+  line-height: 24px;
+  color: #999;
+}
+.articleList .bottom{
+  display: flex;
+  margin-top: 10px;
+  color: #999
+}
+.articleList .item{
+  margin: 0 8px;
+  display: flex;
+}
+.right{
+  flex-grow: 1;
+  margin-left: 20px;
+}
+.right .introduce{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  border-bottom: solid 1px #f0f0f0;
+  color: #2f2f2f
+}
+.right .edit{
+  cursor: pointer;
+}
+.interest{
+  font-size: 14px;
+  color: #333;
+  padding: 25px 0;
+  border-bottom: solid 1px #f0f0f0;
+}
+.interest .attention, .interest .like{
+  display: flex;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.create{
+  padding: 25px 0;
+  border-bottom: solid 1px #f0f0f0;
+}
+.create .title{
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #969696;
+}
+.create .createOperator{
+  color: #3db922;
+  cursor: pointer;
+}
+.create .article{
+  color: #2f2f2f;
+  cursor: pointer;
+}
+
