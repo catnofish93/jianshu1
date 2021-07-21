@@ -20,7 +20,14 @@ class Content extends Component {
         }
     }
     componentDidMount() {
-        instance.post('/articleList', {}).then(res => {
+        this.getArticleList()
+    }
+    getArticleList(search) {
+        let params = {
+            pageSize: 10,
+            search
+        }
+        instance.post('/articleList', params).then(res => {
             if (res.success === false) {
                 message.error('获取列表信息失败')
             } else {
@@ -33,7 +40,6 @@ class Content extends Component {
             message.error(e)
         })
     }
-
     toDetail(item) {
         this.props.router.push({pathname: '/view/detail', query: {id: item.id}})
     }

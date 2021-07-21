@@ -1,4 +1,6 @@
 import axios from 'axios'
+import { message } from "antd";
+
 const instance = axios.create({
   baseURL: 'http://catnofish.cn:7001',
   timeout: 1000,
@@ -18,10 +20,11 @@ instance.interceptors.request.use(function (config) {
 // 添加响应拦截器
 instance.interceptors.response.use(function (response) {
   if (response.data.success === false) {
+    // message.error(response.data.msg)
     // setTimeout(() => {
     //   window.location.replace('http://' + window.location.host)
     // }, 1000)
-    throw response.data.message
+    throw response.data.msg
   } else {
     // 对响应数据做点什么
     return response.data.data
