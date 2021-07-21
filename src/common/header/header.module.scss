@@ -38,15 +38,12 @@
     font-size: 15px
   }
   /* iconfont字体 */
-  //@font-face {
-  //  font-family: 'iconfont';
-  //  src: url('src/static/iconfont/iconfont.eot');
-  //  src: url('src/static/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
-  //      url('src/static/iconfont/iconfont.woff2') format('woff2'),
-  //      url('src/static/iconfont/iconfont.woff') format('woff'),
-  //      url('src/static/iconfont/iconfont.ttf') format('truetype'),
-  //      url('src/static/iconfont/iconfont.svg#iconfont') format('svg');
-  //}
+  @font-face {
+    font-family: 'iconfont';  /* Project id 2476449 */
+    src: url('//at.alicdn.com/t/font_2476449_in37drcnf1l.woff2?t=1626866909721') format('woff2'),
+    url('//at.alicdn.com/t/font_2476449_in37drcnf1l.woff?t=1626866909721') format('woff'),
+    url('//at.alicdn.com/t/font_2476449_in37drcnf1l.ttf?t=1626866909721') format('truetype');
+  }
   .iconfont {
     font-family: "iconfont" !important;
     font-size: 16px;

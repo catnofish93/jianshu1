@@ -95,20 +95,20 @@ class HeaderC extends Component{
                         <div className={styles.download}>下载App</div>
                         <div className={styles.search_wrap}>
                             <input className={[this.props.focused?styles.search + ' ' + styles.search_focus:styles.search]} onClick={this.props.handerFocus}></input>
-                            <span className={this.props.focused?styles.iconfont + ' ' +  styles.loupe + ' '+ styles.graybc:styles.iconfont+' '+styles.loupe}>&#xe624;</span>
+                            <span className={this.props.focused?styles.iconfont + ' ' +  styles.loupe + ' '+ styles.graybc:styles.iconfont+' '+styles.loupe}>&#xe617;</span>
                             {this.props.focused===true?<div className={styles.search_panel}>
                                 <span>热门搜索</span>
-                                <div className={[styles.change_red, this.state.transition?styles.transition:''].join(' ')} onClick={e=>{this.getRedList(e)}}><span className={styles.iconfont}>&#xe6e1;</span>换一批</div>
+                                <div className={[styles.change_red, this.state.transition?styles.transition:''].join(' ')} onClick={e=>{this.getRedList(e)}}><span className={styles.iconfont}>&#xe600;</span>换一批</div>
                                 <div>{this.state.filerArray}</div>
                             </div>:""}
                         </div>
                     </div>
                     <div className={styles.HeaderPerson}>
                         <Popover placement={styles.bottomRight} title={''} content={this.state.content} trigger="click">
-                            <span className={styles.iconfont +' '+styles.Aa}>&#xe636;</span>
+                            <span className={styles.iconfont +' '+styles.Aa}>&#xe611;</span>
                         </Popover>
-                        <span className={styles.iconfont+' '+styles.diamond}>&#xe728;</span>
-                        <span className={styles.iconfont+' '+styles.beta}>&#xe64c;</span>
+                        <span className={styles.iconfont+' '+styles.diamond}>&#xe6d5;</span>
+                        <span className={styles.iconfont+' '+styles.beta}>&#xe690;</span>
                         {
                             this.props.user.id
                                 ? <Dropdown overlay = {this.state.menu} className={styles.dropdown}>
@@ -122,7 +122,7 @@ class HeaderC extends Component{
                             this.props.user.id
                             ?'' :<div className={styles.register} onClick={this.toLogin.bind(this)}>注册</div>
                         }
-                        <div className={styles.writer} onClick={this.writeArticle.bind(this)}><span className={styles.iconfont}>&#xe96a;</span>写文章</div>
+                        <div className={styles.writer} onClick={this.writeArticle.bind(this)}><span className={styles.iconfont}>&#xe691;</span>写文章</div>
                     </div>
                 </div>
                 <div ref={this.contentWrap} className={styles.contentWrap} style={{height: this.state.domHeight + 'px'}} onScroll={this.contentScroll.bind(this)}>{this.props.children}</div>

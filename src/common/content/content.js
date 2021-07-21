@@ -58,7 +58,7 @@ class Content extends Component {
                                   <div className='name'>{item.title}</div>
                                   <div className='detail'>{item.discription}</div>
                                   <div className='operator'>
-                                      <div className='diamond'><span className="iconfont diamond">&#xe728;</span>13.4</div>
+                                      <div className='diamond'><span className="iconfont diamond">&#xe6d5;</span>13.4</div>
                                       <div className='author'>{item.author_name}</div>
                                       <div className='comment'><span className="iconfont diamond">&#xe602;</span>{item.comment_num}</div>
                                       <div className='like'><span className="iconfont diamond">&#xe60a;</span>60</div>

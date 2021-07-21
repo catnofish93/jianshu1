@@ -73,7 +73,7 @@ export default class Detail extends Component {
                                     <span className='attention' style={{color: "#ec7259",backgroundColor: "#fff",borderColor: "#ec7259",border: 'solid 1rpx #ec7259'}}>关注</span>
                                 </div>
                                 <div>
-                                    <span className="iconfont diamond">&#xe728;</span>
+                                    <span className="iconfont diamond">&#xe6d5;</span>
                                     <span className='diamondSum'>1</span>
                                     <span className='readSum'>2021.03.20 22:29:15 字数 {this.state.detail.language_num}阅读 {this.state.detail.read_num}</span>
                                 </div>
