@@ -10,13 +10,15 @@ import record from '../../static/copyRight/smrz-557fa318122c99a66523209bf9753a27
 // import wxb from '../../static/copyRight/wxb-e6e244a25f15a58bc91ceb4ea6d0e70a.png'
 import { Button, Breadcrumb, message } from 'antd';
 import instance from "../../utils/axios";
+import store1 from "../../store";
+import {connect} from "react-redux";
+const store = store1().store
 class Content extends Component {
     constructor(props) {
         document.title = '简书-创作你的创作'
         super(props);
         this.state = {
             download1: false,
-            articleList: []
         }
     }
     componentDidMount() {
@@ -32,8 +34,9 @@ class Content extends Component {
                 message.error('获取列表信息失败')
             } else {
                 console.log(res)
-                this.setState({
-                    articleList: res.list
+                this.props.dispatch({
+                    type: 'setArticle',
+                    data: res.list
                 })
             }
         }).catch(e => {
@@ -58,7 +61,7 @@ class Content extends Component {
             <div>
                 <div className='wrap'>
                     <div>
-                        {this.state.articleList.map(item => {
+                        {this.props.articleList.map(item => {
                             return (
                               <div className='infoList' onClick={this.toDetail.bind(this, item)}>
                                   <div className='name'>{item.title}</div>
@@ -124,4 +127,9 @@ class Content extends Component {
         )
     }
 }
-export default Content
+const mapStateToProps=(state)=>{
+    return {
+        articleList: state.article
+    }
+}
+export default connect(mapStateToProps)(Content)

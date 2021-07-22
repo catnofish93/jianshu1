@@ -2,7 +2,7 @@ import axios from 'axios'
 import { message } from "antd";
 
 const instance = axios.create({
-  baseURL: 'http://catnofish.cn:7001',
+  baseURL: 'http://127.0.0.1:7001',
   timeout: 1000,
   headers: {'X-Custom-Header': 'foobar'}
 })
@@ -20,7 +20,7 @@ instance.interceptors.request.use(function (config) {
 // 添加响应拦截器
 instance.interceptors.response.use(function (response) {
   if (response.data.success === false) {
-    // message.error(response.data.msg)
+    message.error(response.data.msg)
     // setTimeout(() => {
     //   window.location.replace('http://' + window.location.host)
     // }, 1000)

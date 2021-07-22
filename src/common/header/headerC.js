@@ -15,7 +15,8 @@ class HeaderC extends Component{
             transition: false,
             goTopShow: false,
             domHeight: document.body.clientHeight - 58,
-            modelIndex: 0
+            modelIndex: 0,
+            search: ''
         }
         this.state.menu = <Menu>
             <Menu.Item className={styles.menu} onClick={this.goHomePage.bind(this)}>
@@ -94,8 +95,8 @@ class HeaderC extends Component{
                         <div className={styles.home} onClick={this.goHome.bind(this)}>首页</div>
                         <div className={styles.download}>下载App</div>
                         <div className={styles.search_wrap}>
-                            <input className={[this.props.focused?styles.search + ' ' + styles.search_focus:styles.search]} onClick={this.props.handerFocus}></input>
-                            <span className={this.props.focused?styles.iconfont + ' ' +  styles.loupe + ' '+ styles.graybc:styles.iconfont+' '+styles.loupe}>&#xe617;</span>
+                            <input className={[this.props.focused?styles.search + ' ' + styles.search_focus:styles.search]} onClick={this.props.handerFocus.bind(this)} value={this.state.search} onChange={this.searchChange.bind(this)}></input>
+                            <span className={this.props.focused?styles.iconfont + ' ' +  styles.loupe + ' '+ styles.graybc:styles.iconfont+' '+styles.loupe} onClick={(e) => this.redItemClick(e, this.state.search)}>&#xe617;</span>
                             {this.props.focused===true?<div className={styles.search_panel}>
                                 <span>热门搜索</span>
                                 <div className={[styles.change_red, this.state.transition?styles.transition:''].join(' ')} onClick={e=>{this.getRedList(e)}}><span className={styles.iconfont}>&#xe600;</span>换一批</div>
@@ -171,7 +172,7 @@ class HeaderC extends Component{
             console.log(res)
             this.setState({
                 filerArray: res.map((item, index)=>{
-                    return <span onClick={(e) => {this.redItemClick(e, item[index])}} className={styles.red_item} key={index}>{item['name']}</span>
+                    return <span onClick={(e) => {this.redItemClick(e, item['name'])}} className={styles.red_item} key={index}>{item['name']}</span>
                 }),
                 focused: true
             })
@@ -183,11 +184,34 @@ class HeaderC extends Component{
         this.props.router.replace('/signIn')
     }
     redItemClick(e, value) {
+        console.log(e, value)
+        this.setState({
+            search: value
+        })
+        this.props.dispatch(function () {
+            return dispatch => {
+                let params = {
+                    pageSize: 10,
+                    search: value
+                }
+                instance.post('/articleList', params).then(res => {
+                    console.log(res)
+                    dispatch({type: 'setArticle', data: res.list})
+                    dispatch({type:"search_blur"})
+                }).catch(e => {
+                    message.error(e)
+                })
+            }
+        }())
         e.stopPropagation()
-
     }
     writeArticle() {
         this.props.router.replace('/WriteArticle')
+    }
+    searchChange(e) {
+        this.setState({
+            search: e.target.value
+        })
     }
 }
 const mapStateToProps=(state)=>{
@@ -199,11 +223,13 @@ const mapStateToProps=(state)=>{
 const mapDispatchToProps=(dispatch, ownProps)=>{
     return {
         handerFocus(e){
+            console.log(this)
             e.stopPropagation()
             let actions={
                 type:"search_focus"
             }
             dispatch(actions)
+            this.getRedList()
         },
         handerBlur(){
             let actions={
@@ -219,7 +245,8 @@ const mapDispatchToProps=(dispatch, ownProps)=>{
             }
             dispatch(actions)
             this.props.router.replace('/signIn')
-        }
+        },
+        dispatch
     }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(HeaderC);

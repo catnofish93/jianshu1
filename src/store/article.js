@@ -1,10 +1,8 @@
-const defaultState = {
-  article: {
-
-  }
-}
+const defaultState = []
 export default (state = defaultState, action) => {
-  if (action.type === 'getArticle') {
-    return
+  if (action.type === 'setArticle') {
+    console.log(action.data)
+    return action.data
   }
+  return state
 }

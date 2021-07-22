@@ -35,7 +35,8 @@
     box-shadow: 0 0 8px rgba(0,0,0,.2);
     padding: 20px;
     line-height: 1;
-    font-size: 15px
+    font-size: 15px;
+    z-index: 1;
   }
   /* iconfont字体 */
   @font-face {
