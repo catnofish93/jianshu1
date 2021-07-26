@@ -1,9 +1,11 @@
 import React, {Component} from 'react'
 import styles from './index.module.scss'
-import { Menu, Modal, Popconfirm, Dropdown } from 'antd';
+import {Menu, Modal, Popconfirm, Dropdown, Button, message} from 'antd';
 import BraftEditor from 'braft-editor'
 import { PlusOutlined, SettingOutlined, BarsOutlined, QuestionCircleOutlined, SnippetsOutlined } from '@ant-design/icons';
 import 'braft-editor/dist/index.css'
+import instance from "../../utils/axios";
+import {connect} from "react-redux";
 const { SubMenu } = Menu
 const menu = (
   <Menu mode="vertical">
@@ -21,11 +23,12 @@ const menu = (
     <Menu.Item key="4">帮助与反馈</Menu.Item>
   </Menu>
 )
+const windowHeight = document.body.offsetHeight
 class WriteArtilce extends Component {
   constructor() {
     super();
     this.state = {
-      editorState: '',
+      editorState: BraftEditor.createEditorState(null),
       helpModalShow: false
     }
   }
@@ -39,9 +42,9 @@ class WriteArtilce extends Component {
   //   const htmlContent = this.state.editorState.toHTML()
   //   const result = await saveEditorContent(htmlContent)
   // }
-  // handleEditorChange = (editorState) => {
-  //   this.setState({ editorState })
-  // }
+  handleEditorChange = (editorState) => {
+    this.setState({ editorState })
+  }
   componentDidMount () {
     // // 假设此处从服务端获取html格式的编辑器内容
     // const htmlContent = await fetchEditorContent()
@@ -55,6 +58,17 @@ class WriteArtilce extends Component {
   closeHelpModal() {
     this.setState({
       helpModalShow: false
+    })
+  }
+  saveArticle() {
+    let params = {
+      title: '11',
+      content: this.state.editorState.toHTML(),
+      authorName: this.props.user.name,
+      authorId: this.props.user.id
+    }
+    instance.post('/addArticle', params).then(res => {
+      message.success('保存文章成功')
     })
   }
   goHome() {
@@ -109,8 +123,14 @@ class WriteArtilce extends Component {
           <div className={styles.status}>
             已保存
           </div>
-          <div className={styles.title}>
-            2021-06-07
+          <div style={{display: "flex",justifyContent: 'space-between'}}>
+            <div className={styles.title}>
+              2021-06-07
+            </div>
+            <div>
+              <Button type={'primary'} style={{marginLeft: '10px'}} onClick={this.saveArticle.bind(this)}>保存</Button>
+              <Button type={'primary'} style={{marginLeft: '10px'}}>发布文章</Button>
+            </div>
           </div>
           <BraftEditor
             value={this.state.editorState}
@@ -131,4 +151,9 @@ class WriteArtilce extends Component {
     )
   }
 }
-export default WriteArtilce
+const mapStateToProps = (state) => {
+  return {
+    user: state.user
+  }
+}
+export default connect(mapStateToProps)(WriteArtilce)

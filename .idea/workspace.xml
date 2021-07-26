@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8dedb7b8-9e9a-4a4d-86a7-068c81890d61" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/content/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/content/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/header/header.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/header/header.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/header/headerC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/header/headerC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/article.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/article.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/writeArticle/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/writeArticle/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/writeArticle/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/writeArticle/index.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,9 @@
       <workItem from="1626841737881" duration="1620000" />
       <workItem from="1626865258987" duration="3465000" />
       <workItem from="1626930128816" duration="502000" />
-      <workItem from="1626959084974" duration="3924000" />
+      <workItem from="1626959084974" duration="4369000" />
+      <workItem from="1627262170737" duration="299000" />
+      <workItem from="1627262762836" duration="4139000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 项目初始化">
       <created>1626846441901</created>
@@ -75,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1626869659452</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: 搜索文章功能">
+      <created>1626964354081</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626964354081</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
