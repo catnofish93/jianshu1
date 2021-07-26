@@ -31,7 +31,10 @@ class WriteArtilce extends Component {
     this.state = {
       editorState: BraftEditor.createEditorState(null),
       helpModalShow: false,
-      articleTitle: dayjs().format('YYYY-MM-DD')
+      articleTitle: dayjs().format('YYYY-MM-DD'),
+      articleList: [],
+      articleSelected: {},
+      articleSelectedIndex: -1
     }
   }
   // state = {
@@ -51,6 +54,17 @@ class WriteArtilce extends Component {
     // // 假设此处从服务端获取html格式的编辑器内容
     // const htmlContent = await fetchEditorContent()
     // // 使用BraftEditor.createEditorState将html字符串转换为编辑器需要的editorStat
+    let search = {
+      pageSize: 10,
+      userId: this.props.user.id
+    }
+    instance.post('authorArticle', search).then(res => {
+      console.log(res)
+      this.setState({
+        articleList: res.list
+      })
+    })
+    document.title = '简书-写文章'
   }
   helpShow() {
     this.setState({
@@ -74,12 +88,32 @@ class WriteArtilce extends Component {
     })
   }
   articleTitleChange(e) {
+    this.state.articleList[this.state.articleSelectedIndex].title = e.target.value
     this.setState({
-      articleTitle: e.target.value
+      articleList: this.state.articleList
     })
   }
   goHome() {
     this.props.router.replace('/view/list')
+  }
+  newArticle() {
+    this.state.articleList.push({
+      title: dayjs().format('YYYY-MM-DD'),
+      description: ''
+    })
+    this.setState({
+      articleList: this.state.articleList,
+      articleSelected: {
+        title: dayjs().format('YYYY-MM-DD'),
+        description: ''
+      }
+    })
+  }
+  articleSelect(e, index) {
+    this.setState({
+      articleSelected: this.state.articleList[index],
+      articleSelectedIndex: index
+    })
   }
   render() {
     return (
@@ -113,37 +147,49 @@ class WriteArtilce extends Component {
         <div className={styles.articleList}>
           <div className={styles.newArticle}>
             <PlusOutlined />
-            <div>新建文章</div>
+            <div onClick={this.newArticle.bind(this)} style={{cursor: 'pointer'}}>新建文章</div>
           </div>
           <div className={styles.article}>
-            <div className={styles.item}>
-              <SnippetsOutlined />
-              <div className={styles.center}>
-                <div className={styles.title}>无标题文章</div>
-                <div className={styles.description}>描述</div>
-              </div>
-              <SettingOutlined />
-            </div>
+            {
+              this.state.articleList.map((item, index) => {
+                return (
+                    <div className={styles.item} onClick={(e) => {this.articleSelect(e, index)}} key={index}>
+                      <SnippetsOutlined />
+                      <div className={styles.center}>
+                        <div className={styles.title}>{item.title}</div>
+                        <div className={styles.description}>{item.discription}</div>
+                      </div>
+                      <SettingOutlined />
+                    </div>
+                )
+              })
+            }
           </div>
         </div>
         <div className={styles.content}>
-          <div className={styles.status}>
-            已保存
-          </div>
-          <div style={{display: "flex",justifyContent: 'space-between'}}>
-            <div className={styles.title}>
-              <Input value={this.state.articleTitle} onChange={this.articleTitleChange.bind(this)}></Input>
-            </div>
-            <div>
-              <Button type={'primary'} style={{marginLeft: '10px'}} onClick={this.saveArticle.bind(this)}>保存</Button>
-              <Button type={'primary'} style={{marginLeft: '10px'}}>发布文章</Button>
-            </div>
-          </div>
-          <BraftEditor
-            value={this.state.editorState}
-            onChange={this.handleEditorChange}
-            onSave={this.submitContent}
-          />
+          {
+            this.state.articleSelectedIndex !== -1 ? (
+              <div>
+                <div className={styles.status}>
+                已保存
+                </div>
+                <div style={{display: "flex",justifyContent: 'space-between'}}>
+                  <div className={styles.title}>
+                    <Input value={this.state.articleSelected['title']} onChange={this.articleTitleChange.bind(this)}></Input>
+                  </div>
+                  <div>
+                    <Button type={'primary'} style={{marginLeft: '10px'}} onClick={this.saveArticle.bind(this)}>保存</Button>
+                  </div>
+                </div>
+                <BraftEditor
+                    value={this.state.editorState}
+                    onChange={this.handleEditorChange}
+                    onSave={this.submitContent}
+                />
+              </div>
+            ): <div></div>
+          }
+
         </div>
         <Modal title={'常见问题'} footer={'我知道了'} visible={this.state.helpModalShow} width={'400px'} onCancel={this.closeHelpModal.bind(this)}>
           <div>如果你在使用编辑器的过程中遇到问题，可以尝试以下方案解决：</div>
