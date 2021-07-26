@@ -1,11 +1,12 @@
 import React, {Component} from 'react'
 import styles from './index.module.scss'
-import {Menu, Modal, Popconfirm, Dropdown, Button, message} from 'antd';
+import {Menu, Modal, Popconfirm, Dropdown, Button, message, Input} from 'antd';
 import BraftEditor from 'braft-editor'
 import { PlusOutlined, SettingOutlined, BarsOutlined, QuestionCircleOutlined, SnippetsOutlined } from '@ant-design/icons';
 import 'braft-editor/dist/index.css'
 import instance from "../../utils/axios";
 import {connect} from "react-redux";
+var dayjs = require('dayjs')
 const { SubMenu } = Menu
 const menu = (
   <Menu mode="vertical">
@@ -29,7 +30,8 @@ class WriteArtilce extends Component {
     super();
     this.state = {
       editorState: BraftEditor.createEditorState(null),
-      helpModalShow: false
+      helpModalShow: false,
+      articleTitle: dayjs().format('YYYY-MM-DD')
     }
   }
   // state = {
@@ -62,13 +64,18 @@ class WriteArtilce extends Component {
   }
   saveArticle() {
     let params = {
-      title: '11',
+      title: this.state.articleTitle,
       content: this.state.editorState.toHTML(),
       authorName: this.props.user.name,
       authorId: this.props.user.id
     }
     instance.post('/addArticle', params).then(res => {
       message.success('保存文章成功')
+    })
+  }
+  articleTitleChange(e) {
+    this.setState({
+      articleTitle: e.target.value
     })
   }
   goHome() {
@@ -125,7 +132,7 @@ class WriteArtilce extends Component {
           </div>
           <div style={{display: "flex",justifyContent: 'space-between'}}>
             <div className={styles.title}>
-              2021-06-07
+              <Input value={this.state.articleTitle} onChange={this.articleTitleChange.bind(this)}></Input>
             </div>
             <div>
               <Button type={'primary'} style={{marginLeft: '10px'}} onClick={this.saveArticle.bind(this)}>保存</Button>
