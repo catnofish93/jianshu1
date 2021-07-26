@@ -65,9 +65,6 @@
     border-right: 1px solid #d9d9d9;
     font-size: 15px;
     overflow: auto;
-    .selected{
-      background: #aaa;
-    }
     .newArticle{
       display: flex;
       align-items: center;
@@ -83,6 +80,9 @@
       &:hover{
         background: #eee;
       }
+      &.selected{
+        background: #aaa;
+      }
       .center{
         flex-grow: 1;
         text-align: left;
@@ -94,6 +94,7 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
+    width: 100%;
     .status{
       text-align: right;
     }

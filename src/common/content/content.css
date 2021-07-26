@@ -31,8 +31,9 @@
     display: flex;
     font-size: 12px;
     font-weight: 400;
-    line-height: 20px;
-    align-items: baseline;
+}
+.operator .iconfont{
+    margin-right: 3px;
 }
 
 .operator div{

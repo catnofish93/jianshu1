@@ -37,23 +37,14 @@ class WriteArtilce extends Component {
       articleSelectedIndex: -1
     }
   }
-  // state = {
-  //   // 创建一个空的editorState作为初始值
-  //   editorState: BraftEditor.createEditorState(null)
-  // }
-  // submitContent = async () => {
-  //   // 在编辑器获得焦点时按下ctrl+s会执行此方法
-  //   // 编辑器内容提交到服务端之前，可直接调用editorState.toHTML()来获取HTML格式的内容
-  //   const htmlContent = this.state.editorState.toHTML()
-  //   const result = await saveEditorContent(htmlContent)
-  // }
   handleEditorChange = (editorState) => {
     this.setState({ editorState })
   }
   componentDidMount () {
-    // // 假设此处从服务端获取html格式的编辑器内容
-    // const htmlContent = await fetchEditorContent()
-    // // 使用BraftEditor.createEditorState将html字符串转换为编辑器需要的editorStat
+    this.getData()
+    document.title = '简书-写文章'
+  }
+  getData() {
     let search = {
       pageSize: 10,
       userId: this.props.user.id
@@ -64,9 +55,7 @@ class WriteArtilce extends Component {
         articleList: res.list
       })
     })
-    document.title = '简书-写文章'
   }
-
   helpShow() {
     this.setState({
       helpModalShow: true
@@ -78,15 +67,29 @@ class WriteArtilce extends Component {
     })
   }
   saveArticle() {
-    let params = {
-      title: this.state.articleTitle,
-      content: this.state.editorState.toHTML(),
-      authorName: this.props.user.name,
-      authorId: this.props.user.id
+    const article = this.state.articleList[this.state.articleSelectedIndex]
+    if (article.id) {
+      let params = {
+        title: article.title,
+        content: this.state.editorState.toHTML(),
+        id: article.id
+      }
+      instance.post('/editArticle', params).then(res => {
+        this.getData()
+        message.success('保存文章成功')
+      })
+    } else {
+      let params = {
+        title: article.title,
+        content: this.state.editorState.toHTML(),
+        authorName: this.props.user.name,
+        authorId: this.props.user.id
+      }
+      instance.post('/addArticle', params).then(res => {
+        this.getData()
+        message.success('保存文章成功')
+      })
     }
-    instance.post('/addArticle', params).then(res => {
-      message.success('保存文章成功')
-    })
   }
   articleTitleChange(e) {
     this.state.articleList[this.state.articleSelectedIndex].title = e.target.value
@@ -113,7 +116,8 @@ class WriteArtilce extends Component {
   articleSelect(e, index) {
     this.setState({
       articleSelected: this.state.articleList[index],
-      articleSelectedIndex: index
+      articleSelectedIndex: index,
+      editorState: BraftEditor.createEditorState(this.state.articleList[index].content)
     })
   }
   render() {
@@ -154,7 +158,7 @@ class WriteArtilce extends Component {
             {
               this.state.articleList.map((item, index) => {
                 return (
-                    <div className={[styles.item, this.state.articleSelectedIndex === index?'selected':''].join(' ')} onClick={(e) => {this.articleSelect(e, index)}} key={index}>
+                    <div className={[styles.item, this.state.articleSelectedIndex === index?styles.selected:null].join(' ')} onClick={(e) => {this.articleSelect(e, index)}} key={index}>
                       <SnippetsOutlined />
                       <div className={styles.center}>
                         <div className={styles.title}>{item.title}</div>
@@ -171,9 +175,9 @@ class WriteArtilce extends Component {
           {
             this.state.articleSelectedIndex !== -1 ? (
               <div>
-                <div className={styles.status}>
-                已保存
-                </div>
+                {/*<div className={styles.status}>*/}
+                {/*已保存*/}
+                {/*</div>*/}
                 <div style={{display: "flex",justifyContent: 'space-between'}}>
                   <div className={styles.title}>
                     <Input value={this.state.articleSelected['title']} onChange={this.articleTitleChange.bind(this)}></Input>
@@ -188,7 +192,7 @@ class WriteArtilce extends Component {
                     onSave={this.submitContent}
                 />
               </div>
-            ): <div>11</div>
+            ): <div style={{textAlign: 'center'}}>暂无文章</div>
           }
 
         </div>
