@@ -66,6 +66,7 @@ class WriteArtilce extends Component {
     })
     document.title = '简书-写文章'
   }
+
   helpShow() {
     this.setState({
       helpModalShow: true
@@ -153,7 +154,7 @@ class WriteArtilce extends Component {
             {
               this.state.articleList.map((item, index) => {
                 return (
-                    <div className={styles.item} onClick={(e) => {this.articleSelect(e, index)}} key={index}>
+                    <div className={[styles.item, this.state.articleSelectedIndex === index?'selected':''].join(' ')} onClick={(e) => {this.articleSelect(e, index)}} key={index}>
                       <SnippetsOutlined />
                       <div className={styles.center}>
                         <div className={styles.title}>{item.title}</div>
@@ -187,7 +188,7 @@ class WriteArtilce extends Component {
                     onSave={this.submitContent}
                 />
               </div>
-            ): <div></div>
+            ): <div>11</div>
           }
 
         </div>
