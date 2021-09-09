@@ -2,7 +2,7 @@ import axios from 'axios'
 import { message } from "antd";
 
 const instance = axios.create({
-  baseURL: 'http://127.0.0.1:7001',
+  baseURL: 'http://catnofish.cn:7001',
   timeout: 1000,
   headers: {'X-Custom-Header': 'foobar'}
 })

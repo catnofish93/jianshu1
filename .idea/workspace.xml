@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8dedb7b8-9e9a-4a4d-86a7-068c81890d61" name="默认的" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/content/content.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/content/content.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/content/content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/content/content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/header/headerC.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/header/headerC.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/writeArticle/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/writeArticle/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/common/writeArticle/index.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/writeArticle/index.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/common/signIn/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/common/signIn/signIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/axios.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,6 +53,8 @@
       <workItem from="1627262170737" duration="299000" />
       <workItem from="1627262762836" duration="13852000" />
       <workItem from="1627303896211" duration="3099000" />
+      <workItem from="1628426442836" duration="357000" />
+      <workItem from="1631105046277" duration="1399000" />
     </task>
     <task id="LOCAL-00001" summary="feat: 项目初始化">
       <created>1626846441901</created>
@@ -118,6 +117,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: 项目初始化" />
