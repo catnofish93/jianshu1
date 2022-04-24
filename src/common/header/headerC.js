@@ -192,7 +192,8 @@ class HeaderC extends Component{
             return dispatch => {
                 let params = {
                     pageSize: 10,
-                    search: value
+                    search: value,
+                    pageNum: 1
                 }
                 instance.post('/articleList', params).then(res => {
                     console.log(res)

@@ -131,6 +131,8 @@ class SignIn extends Component {
                   <WechatOutlined className={'socialIcon'} style={{color: '#00bb29'}} />
                   <QqOutlined className={'socialIcon'} style={{color: '#498ad5'}} />
                 </div>
+                <br />
+                <div>测试账号：16602719762 密码：123456</div>
               </div>
             </div>
           </div>

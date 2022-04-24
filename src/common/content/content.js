@@ -19,24 +19,28 @@ class Content extends Component {
         super(props);
         this.state = {
             download1: false,
+            pageNum: 1
         }
     }
     componentDidMount() {
-        this.getArticleList()
+        this.getArticleList('', this.state.pageNum)
     }
-    getArticleList(search) {
+    getArticleList(search, pageNum) {
         let params = {
             pageSize: 10,
-            search
+            search,
+            pageNum: this.state.pageNum
         }
         instance.post('/articleList', params).then(res => {
             if (res.success === false) {
                 message.error('获取列表信息失败')
             } else {
-                console.log(res)
+                this.setState({
+                    pageNum: this.state.pageNum + 1
+                })
                 this.props.dispatch({
                     type: 'setArticle',
-                    data: res.list
+                    data: this.props.articleList.concat(res.list)
                 })
             }
         }).catch(e => {
@@ -55,6 +59,9 @@ class Content extends Component {
         this.setState({
             download1: false
         })
+    }
+    readMore() {
+        this.getArticleList('', this.state.pageNum)
     }
     render() {
         return (
@@ -75,7 +82,7 @@ class Content extends Component {
                               </div>
                             )
                         })}
-                        <Button type="primary" block={true} shape={'round'} style={{background: '#9b9b9b', color: '#fff', marginTop: '15px'}}>阅读更多</Button>
+                        <Button type="primary" onClick={this.readMore.bind(this)} block={true} shape={'round'} style={{background: '#9b9b9b', color: '#fff', marginTop: '15px'}}>阅读更多</Button>
                         <div className={'otherFunction'}>
                             <div className={'item'}>关于简书</div>
                             <div className={'dian'}>.</div>
